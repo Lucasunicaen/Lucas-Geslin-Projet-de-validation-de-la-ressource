@@ -4,14 +4,17 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
 html {
-	font-size: 10px;
+	font-size: 10px; /* Facilite l'utilisation de rem */
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+
 a {
 	text-decoration: none;
 }
+
 .container {
 	min-height: 100vh;
 	width: 100%;
@@ -19,11 +22,13 @@ a {
 	align-items: center;
 	justify-content: center;
 }
+
 img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+	height: 100%; /* Assurez-vous que l'image occupe toute la hauteur du conteneur */
+	width: 100%; /* Assurez-vous que l'image occupe toute la largeur du conteneur */
+	object-fit: cover; /* L'image remplit le conteneur sans déformation */
 }
+
 p {
 	color: black;
 	font-size: 1.4rem;
@@ -32,6 +37,7 @@ p {
 	font-weight: 300;
 	letter-spacing: 0.05rem;
 }
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
@@ -41,6 +47,7 @@ p {
 	letter-spacing: 0.2rem;
 	text-align: center;
 }
+
 .section-title span {
 	color: crimson;
 }
@@ -58,18 +65,23 @@ p {
 	transition: 0.3s ease;
 	transition-property: background-color, color;
 }
+
 .cta:hover {
 	color: white;
 	background-color: crimson;
 }
+
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: white;
 }
+
 .brand h1 span {
 	color: crimson;
 }
+
+
 
 /* Header section */
 #header {
@@ -80,11 +92,13 @@ p {
 	width: 100vw;
 	height: auto;
 }
+
 #header .header {
 	min-height: 8vh;
 	background-color: rgba(31, 30, 30, 0.24);
 	transition: 0.3s ease background-color;
 }
+
 #header .nav-bar {
 	display: flex;
 	align-items: center;
@@ -94,6 +108,7 @@ p {
 	max-width: 1300px;
 	padding: 0 10px;
 }
+
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
@@ -110,9 +125,11 @@ p {
 	overflow-x: hidden;
 	transition: 0.5s ease left;
 }
+
 #header .nav-list ul.active {
-	left: 0%;
+	left: 0;
 }
+
 #header .nav-list ul a {
 	font-size: 2.5rem;
 	font-weight: 500;
@@ -122,7 +139,9 @@ p {
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
+	position: relative;
 }
+
 #header .nav-list ul a::after {
 	content: attr(data-after);
 	position: absolute;
@@ -135,28 +154,32 @@ p {
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
 }
+
 #header .nav-list ul li:hover a::after {
 	transform: translate(-50%, -50%) scale(1);
 	letter-spacing: initial;
 }
+
 #header .nav-list ul li:hover a {
 	color: crimson;
 }
+
+/* Hamburger styles */
 #header .hamburger {
 	height: 60px;
 	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 100;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
 	cursor: pointer;
 	transform: scale(0.8);
 	margin-right: 20px;
+	z-index: 100;
 }
+
 #header .hamburger:after {
 	position: absolute;
 	content: '';
@@ -166,15 +189,16 @@ p {
 	border: 3px solid white;
 	animation: hamburger_puls 1s ease infinite;
 }
+
 #header .hamburger .bar {
 	height: 2px;
 	width: 30px;
-	position: relative;
 	background-color: white;
-	z-index: -1;
+	position: relative;
 }
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
+
+#header .hamburger .bar::before,
+#header .hamburger .bar::after {
 	content: '';
 	position: absolute;
 	height: 100%;
@@ -182,31 +206,35 @@ p {
 	left: 0;
 	background-color: white;
 	transition: 0.3s ease;
-	transition-property: top, bottom;
 }
-#header .hamburger .bar::after {
-	top: 8px;
-}
+
 #header .hamburger .bar::before {
 	bottom: 8px;
 }
+
+#header .hamburger .bar::after {
+	top: 8px;
+}
+
 #header .hamburger.active .bar::before {
 	bottom: 0;
 }
+
 #header .hamburger.active .bar::after {
 	top: 0;
 }
-/* End Header section */
+/* fin Header section */
 
-/* Hero Section */
-#hero {
-	background-image: url(./image2.jpg);
+
+/* debut Section */
+#debut {
+	background-image: url(/portfoliobywebcog/img/image2.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
 }
-#hero::after {
+#debut::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -217,13 +245,13 @@ p {
 	opacity: 0.7;
 	z-index: -1;
 }
-#hero .hero {
+#debut .debut {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
 }
-#hero h1 {
+#debut h1 {
 	display: block;
 	width: fit-content;
 	font-size: 4rem;
@@ -232,17 +260,17 @@ p {
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
 }
-#hero h1:nth-child(1) {
+#debut h1:nth-child(1) {
 	animation-delay: 1s;
 }
-#hero h1:nth-child(2) {
+#debut h1:nth-child(2) {
 	animation-delay: 2s;
 }
-#hero h1:nth-child(3) {
+#debut h1:nth-child(3) {
 	animation: text_reveal_name 0.5s ease forwards;
 	animation-delay: 3s;
 }
-#hero h1 span {
+#debut h1 span {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -252,17 +280,17 @@ p {
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
-#hero h1:nth-child(1) span {
+#debut h1:nth-child(1) span {
 	animation-delay: 0.5s;
 }
-#hero h1:nth-child(2) span {
+#debut h1:nth-child(2) span {
 	animation-delay: 1.5s;
 }
-#hero h1:nth-child(3) span {
+#debut h1:nth-child(3) span {
 	animation-delay: 2.5s;
 }
 
-/* End Hero Section */
+/* End debut Section */
 
 /* Services Section */
 #services .services {
@@ -291,7 +319,7 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./image1.jpg);
+	background-image: url(/portfoliobywebcog/img/image1.jpg);
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
@@ -324,7 +352,7 @@ p {
 	color: white;
 	text-align: left;
 }
-/* End Services Section */
+/* fin Services Section */
 
 /* Projects section */
 #projects .projects {
@@ -399,99 +427,6 @@ p {
 }
 /* fin section project */
 
-/*  Section A propos */
-#about .about {
-	flex-direction: column-reverse;
-	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 20px;
-}
-#about .col-left {
-	width: 250px;
-	height: 360px;
-}
-#about .col-right {
-	width: 100%;
-}
-#about .col-right h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
-	margin-bottom: 10px;
-}
-#about .col-right p {
-	margin-bottom: 20px;
-}
-#about .col-right .cta {
-	color: black;
-	margin-bottom: 50px;
-	padding: 10px 20px;
-	font-size: 2rem;
-}
-#about .col-left .about-img {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	border: 10px solid white;
-}
-#about .col-left .about-img::after {
-	content: '';
-	position: absolute;
-	left: -33px;
-	top: 19px;
-	height: 98%;
-	width: 98%;
-	border: 7px solid crimson;
-	z-index: -1;
-}
-/* End About Section */
-
-/* contact Section */
-#contact .contact {
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
-	width: 90%;
-}
-#contact .contact-items {
-	/* max-width: 400px; */
-	width: 100%;
-}
-#contact .contact-item {
-	width: 80%;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	padding: 30px;
-	margin: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
-	transition: 0.3s ease box-shadow;
-}
-#contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
-}
-#contact .icon {
-	width: 70px;
-	margin: 0 auto;
-	margin-bottom: 10px;
-}
-#contact .contact-info h1 {
-	font-size: 2.5rem;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
-#contact .contact-info h2 {
-	font-size: 1.3rem;
-	line-height: 2rem;
-	font-weight: 500;
-}
-/*End contact Section */
-
 /* Footer */
 #footer {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
@@ -530,7 +465,7 @@ p {
 	color: white;
 	font-size: 1.3rem;
 }
-/* End Footer */
+/* fin Footer */
 
 /* Keyframes */
 @keyframes hamburger_puls {
@@ -564,7 +499,7 @@ p {
 		font-weight: 500;
 	}
 }
-/* End Keyframes */
+/* fin Keyframes */
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
@@ -576,18 +511,18 @@ p {
 		font-size: 6rem;
 	}
 
-	/* Hero */
-	#hero h1 {
+	/* debut */
+	#debut h1 {
 		font-size: 7rem;
 	}
-	/* End Hero */
+	/* fin debut */
 
 	/* Services Section */
 	#services .service-bottom .service-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End Services Section */
+	/* fin Services Section */
 
 	/* Project */
 	#projects .project-item {
@@ -608,7 +543,7 @@ p {
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
-	/* End Project */
+	/* fin produits */
 
 	/* About */
 	#about .about {
@@ -633,7 +568,7 @@ p {
 	#about .col-right h1 {
 		text-align: left;
 	}
-	/* End About */
+	/* fin About */
 
 	/* contact  */
 	#contact .contact {
@@ -667,9 +602,9 @@ p {
 		text-align: left;
 		padding-left: 20px;
 	}
-	/* End contact  */
+	/* fin contact  */
 }
-/* End Media Query For Tablet */
+/* fin Media Query For Tablet */
 
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
@@ -693,11 +628,11 @@ p {
 	#header .nav-list ul a:after {
 		display: none;
 	}
-	/* End header */
+	/* fin header */
 
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
 }
-/* End  Media Query For Desktop */
+/* fin  Media Query For Desktop */
