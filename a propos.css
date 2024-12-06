@@ -5,7 +5,7 @@
 }
 
 html {
-	font-size: 10px; /* Facilite l'utilisation de rem */
+	font-size: 10px; 
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
@@ -23,9 +23,9 @@ a {
 }
 
 img {
-	height: 100%; /* Assurez-vous que l'image occupe toute la hauteur du conteneur */
-	width: 100%; /* Assurez-vous que l'image occupe toute la largeur du conteneur */
-	object-fit: cover; /* L'image remplit le conteneur sans déformation */
+	height: 100%;
+	width: 100%; 
+	object-fit: cover; 
 }
 
 p {
@@ -37,7 +37,7 @@ p {
 	letter-spacing: 0.05rem;
 }
 
-.section-title {
+.partie-titre {
 	font-size: 4rem;
 	font-weight: 300;
 	color: black;
@@ -47,7 +47,7 @@ p {
 	text-align: center;
 }
 
-.section-title span {
+.partie-titre span {
 	color: crimson;
 }
 
@@ -81,137 +81,52 @@ p {
 }
 
 
-
-/* Header section */
-#header {
-	position: fixed;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: auto;
-}
-
-#header .header {
-	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
-	transition: 0.3s ease background-color;
-}
-
-#header .nav-bar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	height: 100%;
-	max-width: 1300px;
-	padding: 0 10px;
-}
-
-#header .nav-list ul {
-	list-style: none;
-	position: absolute;
-	background-color: rgb(31, 30, 30);
-	width: 100vw;
-	height: 100vh;
-	left: 100%;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	overflow-x: hidden;
-	transition: 0.5s ease left;
-}
-
-#header .nav-list ul.active {
-	left: 0;
-}
-
-#header .nav-list ul a {
-	font-size: 2.5rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
-	text-decoration: none;
-	color: white;
-	text-transform: uppercase;
-	padding: 20px;
-	display: block;
-	position: relative;
-}
-
-#header .nav-list ul a::after {
-	content: attr(data-after);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
-	font-size: 13rem;
-	letter-spacing: 50px;
-	z-index: -1;
-	transition: 0.3s ease letter-spacing;
-}
-
-#header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
-}
-
-#header .nav-list ul li:hover a {
-	color: crimson;
-}
-
-
-
 /*  Section A propos */
-#about .about {
+#Apropos .Apropos {
 	flex-direction: column-reverse;
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 20px;
 }
-#about .col-left {
-	width: 250px;
-	height: 360px;
+#Apropos .imageBoucher {
+	width: 600px;
+	height: 600px;
 }
-#about .col-right {
+#Apropos .TexteApropos {
 	width: 100%;
 }
-#about .col-right h2 {
+#Apropos .TexteApropos h2 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	margin-bottom: 10px;
 }
-#about .col-right p {
+#Apropos .TexteApropos p {
 	margin-bottom: 20px;
 }
-#about .col-right .cta {
+#Apropos .TexteApropos .cta {
 	color: black;
 	margin-bottom: 50px;
 	padding: 10px 20px;
 	font-size: 2rem;
 }
-#about .col-left .about-img {
+#Apropos .imageBoucher .Apropos-img {
 	height: 100%;
 	width: 100%;
 	position: relative;
 	border: 10px solid white;
 }
-#about .col-left .about-img::after {
+#Apropos .imageBoucher .Apropos-img::after {
 	content: '';
 	position: absolute;
-	left: -33px;
-	top: 19px;
+	left: -7px;
 	height: 98%;
-	width: 98%;
+	width: 100%;
 	border: 7px solid crimson;
-	z-index: -1;
+	
 }
-/* fin About Section */
+/* fin Apropos Section */
 
 /* contact Section */
 #contact .contact {
@@ -220,25 +135,21 @@ p {
 	margin: 0 auto;
 	width: 90%;
 }
-#contact .contact-items {
-	/* max-width: 400px; */
+#contact .blocscontacts {
 	width: 100%;
 }
-#contact .contact-item {
+#contact .blocContenue {
 	width: 80%;
-	padding: 20px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 100px;
 	padding: 30px;
-	margin: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin: 60px;
 	flex-direction: column;
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: 0.3s ease box-shadow;
 }
-#contact .contact-item:hover {
+#contact .blocContenue:hover {
+	/* mets une petite animation quand on la survole */
 	box-shadow: 0px 0px 5px 0 #0000002c;
 }
 #contact .icon {
