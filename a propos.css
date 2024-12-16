@@ -132,14 +132,14 @@ p {
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
-	margin: 0 auto;
+	margin:  auto;
 	width: 90%;
 }
 #contact .blocscontacts {
 	width: 100%;
 }
 #contact .blocContenue {
-	width: 80%;
+	width: 92%;
 	text-align: center;
 	border-radius: 100px;
 	padding: 30px;
