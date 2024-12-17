@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
 * {
 	padding: 0;
 	margin: 0;
@@ -80,6 +81,21 @@ p {
 	color: crimson;
 }
 
+/* en-tête section */
+#en-tête {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+
+#en-tête .en-tête {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
 
 /*  Section A propos */
 #Apropos .Apropos {
@@ -168,3 +184,127 @@ p {
 	font-weight: 500;
 }
 /*fin contact Section */
+
+/* BasdePage */
+#BasdePage {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#BasdePage .BasdePage {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#BasdePage h2 {
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#BasdePage .logoRéseau {
+	display: flex;
+	margin-bottom: 30px;
+}
+#BasdePage .iconeRéseau i {
+	font-size: 50px;
+	margin: 0 5px;
+}
+
+#BasdePage .iconeRéseau i {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+#BasdePage .iconeRéseau:hover i {
+	filter: grayscale(0);
+}
+#BasdePage p {
+	color: white;
+	font-size: 1.3rem;
+}
+/* fin BasdePage */
+
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+	
+	.brand h1 {
+	  font-size: 2rem;
+	}
+	.partie-titre {
+	  font-size: 3rem;
+	}
+  
+	.cta {
+	  font-size: 1.5rem;
+	  padding: 10px 20px;
+	}
+  
+	#Apropos .Apropos {
+	  flex-direction: column;
+	  padding: 50px 20px;
+	}
+  
+	#Apropos .imageBoucher {
+	  width: 100%;
+	  height: auto;
+	}
+  
+	#Apropos .TexteApropos {
+	  width: 100%;
+	  text-align: center;
+	}
+  
+	#Apropos .TexteApropos h2 {
+	  font-size: 1.4rem;
+	}
+  
+	#Apropos .TexteApropos p {
+	  font-size: 1.2rem;
+	}
+  
+	#contact .contact {
+	  flex-direction: column;
+	  width: 100%;
+	  padding: 20px;
+	}
+  
+	#contact .blocContenue {
+	  width: 100%;
+	  margin: 10px 0;
+	  padding: 20px;
+	  text-align: center;
+	}
+  
+	#contact .contact-info h1 {
+	  font-size: 1.8rem;
+	}
+  
+	#contact .contact-info h2 {
+	  font-size: 1.2rem;
+	}
+  
+	/* Section Bas de Page */
+	#BasdePage .BasdePage {
+	  padding-top: 30px;
+	  padding-bottom: 20px;
+	  text-align: center;
+	}
+  
+	#BasdePage .logoRéseau {
+	  display: flex;
+	  justify-content: center;
+	  margin-bottom: 20px;
+	}
+  
+	#BasdePage .iconeRéseau i {
+	  font-size: 40px;
+	  margin: 0 10px;
+	}
+  
+	#BasdePage p {
+	  font-size: 1rem;
+	}
+  }
+  

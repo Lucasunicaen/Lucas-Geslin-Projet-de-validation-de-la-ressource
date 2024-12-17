@@ -164,66 +164,6 @@ p {
 	color: crimson;
 }
 
-/* Hamburger styles */
-#en-tête .hamburger {
-	height: 60px;
-	width: 60px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
-	cursor: pointer;
-	transform: scale(0.8);
-	margin-right: 20px;
-	z-index: 100;
-}
-
-#en-tête .hamburger:after {
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 3px solid white;
-	animation: hamburger_puls 1s ease infinite;
-}
-
-#en-tête .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	background-color: white;
-	position: relative;
-}
-
-#en-tête .hamburger .bar::before,
-#en-tête .hamburger .bar::after {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: white;
-	transition: 0.3s ease;
-}
-
-#en-tête .hamburger .bar::before {
-	bottom: 8px;
-}
-
-#en-tête .hamburger .bar::after {
-	top: 8px;
-}
-
-#en-tête .hamburger.active .bar::before {
-	bottom: 0;
-}
-
-#en-tête .hamburger.active .bar::after {
-	top: 0;
-}
-/* fin en-tête section */
 
 
 /* debut Section */
@@ -337,10 +277,9 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
-#services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
+#services .service-bottom .icon i  {
+	font-size: 60px;
+
 }
 #services .service-item h2 {
 	font-size: 2rem;
@@ -449,16 +388,16 @@ p {
 	display: flex;
 	margin-bottom: 30px;
 }
-#BasdePage .iconeRéseau img {
-	height: 50px;
-	width: 50px;
+#BasdePage .iconeRéseau i {
+	font-size: 50px;
 	margin: 0 5px;
 }
-#BasdePage .iconeRéseau img {
+
+#BasdePage .iconeRéseau i {
 	filter: grayscale(1);
 	transition: 0.3s ease filter;
 }
-#BasdePage .iconeRéseau:hover img {
+#BasdePage .iconeRéseau:hover i {
 	filter: grayscale(0);
 }
 #BasdePage p {
