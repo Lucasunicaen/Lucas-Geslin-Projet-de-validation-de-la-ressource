@@ -225,7 +225,7 @@ p {
 /* fin BasdePage */
 
 
-/* Mobile */
+/* @media pour écran de téléphone */
 @media only screen and (max-width: 767px) {
 	
 	.brand h1 {

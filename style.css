@@ -440,7 +440,7 @@ p {
 }
 /* fin Keyframes */
 
-/* Media Query For Tablet */
+/* @media pour écran de téléphone  */
 @media only screen and (min-width: 768px) {
 	.cta {
 		font-size: 2.5rem;
@@ -511,14 +511,11 @@ p {
 
 
 }
-/* fin Media Query For Tablet */
+/* fin @media pour écran de téléphone  */
 
-/* Media Query For Desktop */
+/* @ media Pour écran PC */
 @media only screen and (min-width: 1200px) {
 	/* en-tête */
-	#en-tête .hamburger {
-		display: none;
-	}
 	#en-tête .nav-list ul {
 		position: initial;
 		display: block;
@@ -542,4 +539,4 @@ p {
 		margin: 1.5%;
 	}
 }
-/* fin  Media Query For Desktop */
+/* fin @media pour les écran de pc  */
